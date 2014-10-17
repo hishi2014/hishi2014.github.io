@@ -5,7 +5,7 @@
 }
   li{list-style: none;}
 #container{
-  margin:auto;
+  margin:25px;
   width:960px;
   text-decoration: none;
 }
@@ -78,7 +78,7 @@
 
 #content{
   width: 960px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 #main{
 width: 610px;

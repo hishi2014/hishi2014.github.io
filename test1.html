@@ -60,7 +60,7 @@
       <div id="side">
       <p><img src="./img/side_top.png" alt="" ></p>
       <ul>
-        <li><a href=""><img src="syatyou.png" alt=""></a></li>
+        <li><a href=""><img src="holder.js/280x60/random" alt=""></a></li>
         <li><a href=""><img src="holder.js/280x60/random" alt=""></a></li>
         <li><a href=""><img src="holder.js/280x60/random" alt=""></a></li>
         <li><a href=""><img src="holder.js/280x60/random" alt=""></a></li>
@@ -84,15 +84,16 @@ window.onload=function(){$("map area").on("click",function(event)
 {
   var top=document.getElementById("g_nav").getBoundingClientRect().top;
   var scrolltop=document.body.scrollTop;
+  var scrollleft=document.body.scrollLeft;
   var pos=$(event.currentTarget).attr("coords").split(",");
   var count=0;
   var x=function(r,d){return Math.round(r*Math.sin((d/180)*Math.PI));};
   var y=function(r,d){return Math.round(r*Math.cos((d/180)*Math.PI));};
-  var e=function(l,r,d){$( l ).css({top:scrolltop+top+parseInt(pos[1])+y(r,d),left:parseInt(pos[0])+x(r,d)});};
+  var e=function(l,r,d){$( l ).css({top:scrolltop+top+parseInt(pos[1])+y(r,d),left:scrollleft+parseInt(pos[0])+x(r,d)});};
   var g=function(i){
                                   var r=0;
                                   var d=330;
-                                  var a=$( "<div><a href='/'></a></div>" ).css({width:"50px",height:"50px",backgroundImage:"url('./img/sc_menu.png')",backgroundPosition:i*50+"px"+" 0px",display:"block",position:"absolute",top:scrolltop+top+parseInt(pos[1]),left:parseInt(pos[0]),zOrder:"2"});
+                                  var a=$( "<div><a href='/'></a></div>" ).css({width:"50px",height:"50px",backgroundImage:"url('./img/sc_menu.png')",backgroundPosition:i*50+"px"+" 0px",display:"block",position:"absolute",top:scrolltop+top+parseInt(pos[1]),left:scrollleft+parseInt(pos[0]),zOrder:"2"});
                                   a.appendTo( "#g_nav" );
                                   var t=setInterval(function(){
                                                                                      e(a,r,330);
