@@ -12,8 +12,8 @@ var j=h+g+30-i;
 var k=e+h+20-i;
 var l=document.getElementById("back");
 
-$(document).ready(function(){
-    $(window).scroll(function(){
+window.onload=function(){
+window.onscroll=function(){
    if(e>f){
   b.style.height=e+"px";
 }
@@ -33,5 +33,5 @@ $(document).ready(function(){
    c.style.top="";
    l.style.display="none";
 }
-});
-});
+};
+};
